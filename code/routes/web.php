@@ -11,13 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', "IndexController@Index");
+Route::get('/doc', "IndexController@doc");
 
 Route::get('/luckydraw','LuckyDrawController@show');
 Route::post('/luckydraw','LuckyDrawController@draw');
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
