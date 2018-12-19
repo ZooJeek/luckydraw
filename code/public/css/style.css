@@ -86,10 +86,3 @@ div.containers > .nes-container {
     display: none;
   }
 }
-
-@font-face {
-    font-family: 'Zpix';
-    src: url('/font/Zpix.ttf');
-    font-weight: 900;
-    
-}

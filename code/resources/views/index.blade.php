@@ -15,24 +15,24 @@
 
   <body>
     <header>
-      <h1><i class="snes-jp-logo brand"></i>立秋夕烛 - 风の谷</h1>
+      <h1><i class="snes-jp-logo brand"></i> 風の谷 - Game </h1>
       <p>Happy christmas!</p>
     </header>
     <section class="nes-container with-title is-centered is-rounded is_dark">
-      <h1 class="title"> 首 页 </h1>
+      <h1 class="title"> 首 頁 </h1>
       <div>
-        <button class="nes-btn is-primary"> 简 介 </button>
-        <button class="nes-btn is-success"> 活 动 </button>
-        <button class="nes-btn is-warning"> 留 言 板 </button>
-        <button class="nes-btn is-error"> QQ 群 </button>
+        <button class="nes-btn is-primary"> 簡 介 </button>
+        <button class="nes-btn is-success"> 活 動 </button>
+        <button class="nes-btn is-warning"> 留言板 </button>
+        <button class="nes-btn is-error"> 登入/註冊 </button>
       </div>
     </section>
-    <section class="nes-container with-title is-dark">
-      <h2 class="title">{{ $active_body ?? "简介" }}</h2>
+    <section class="nes-container with-title" style="text-align: center;">
+      <h2 class="title">{{ $active_body ?? "簡 介" }}</h2>
       <div class="containers" id='active_body'>
-        <p>不定期举行抽奖等活动，均在本页面举行。<p>
-        <p>请先注册账号，昵称和游戏中吻合，否则无效。</p>
-        <p>遇到解决不了的问题请在群里 @花落悲秋老郑客</p>
+        
+        <i class="nes-octocat"></i>此處正在施工...
+
       </div>
     </section>
 
