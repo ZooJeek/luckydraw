@@ -15,7 +15,7 @@
 
   <body>
     <header>
-      <h1><i class="snes-jp-logo brand"></i> 风の谷 - Game </h1>
+      <h1><i class="snes-jp-logo brand"></i> 風の谷 - Game </h1>
       <p>Happy christmas!</p>
     </header>
     <section class="nes-container with-title is-centered is-rounded is_dark">
