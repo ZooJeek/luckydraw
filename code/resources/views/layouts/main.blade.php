@@ -19,21 +19,20 @@
       <p>Happy christmas!</p>
     </header>
     <section class="nes-container with-title is-centered is-rounded is_dark">
-      <h1 class="title"><img src="/image/logo.png" style="width:43px;margin-top: -10px;"> 喵 了 个 咪 </h1>
+      <h1 class="title" style="margin-top: -50px;"><img src="/image/logo.png" style="width:55px;"> 喵 了 个 咪 </h1>
       <div>
-        <button class="nes-btn is-primary"> 简 介 </button>
-        <button class="nes-btn is-success"> 活 動 </button>
-        <button class="nes-btn is-warning"> 登 入 </button>
-        <button class="nes-btn is-error"> 註 冊 </button>
+        <button class="nes-btn is-primary" onclick="locate('/')"> 简 介 </button>
+        <button class="nes-btn is-success" onclick="locate('/activity')"> 活 動 </button>
+        <button class="nes-btn is-warning" onclick="locate('/login')"> 登 入 </button>
+        <button class="nes-btn is-error" onclick="locate('/regis')"> 註 冊 </button>
       </div>
     </section>
-    <section class="nes-container with-title" style="text-align: center;">
-      <h2 class="title">{{ $active_title ?? "简介" }}</h2>
+    <section class="nes-container with-title" style="text-align: center;margin-top: 30px;">
+      <h2 class="title" style="margin-top: -50px;">{{ $active_title ?? "简介" }}</h2>
       <div class="containers" id='active_body'>
         
         @yield('active_body')
         
-
       </div>
     </section>
 
@@ -45,4 +44,9 @@
       </p>
     </footer>
   </body>
+  <script>
+    function locate(url){
+      location.href = url;
+    }
+  </script>
 </html>

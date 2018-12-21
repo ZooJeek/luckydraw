@@ -12,10 +12,10 @@
 */
 
 Route::get('/', "IndexController@Index");
+Route::get('/login', "IndexController@login");
+Route::get('/regis', "IndexController@regis");
+Route::get('/activity', "IndexController@activity");
+
+Route::post('/login', "IndexController@loginHandle");
+
 Route::get('/doc', "IndexController@doc");
-
-Route::get('/luckydraw','LuckyDrawController@show');
-Route::post('/luckydraw','LuckyDrawController@draw');
-
-Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
