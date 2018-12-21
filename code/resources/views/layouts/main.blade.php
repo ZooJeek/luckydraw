@@ -18,7 +18,7 @@
       <h1><i class="snes-jp-logo brand"></i> 阴阳师 - 風の谷 </h1>
       <p>Happy christmas!</p>
     </header>
-    <section class="nes-container with-title is-centered is-rounded is_dark">
+    <section class="nes-container with-title is-centered is-rounded is_dark" style="margin-top: 50px;">
       <h1 class="title" style="margin-top: -50px;"><img src="/image/logo.png" style="width:55px;"> 喵 了 个 咪 </h1>
       <div>
         <button class="nes-btn is-primary" onclick="locate('/')"> 简 介 </button>
