@@ -17,10 +17,10 @@
   <body>
     <header>
       <h3>阴阳师 - 風の谷</h3>
-      <p>Happy christmas!</p>
+      <p>Happy christmas! （*+﹏+*）</p>
     </header>
     <section class="nes-container with-title is-centered is-rounded is_dark" style="margin-top: 50px;">
-      <h1 class="title" style="margin-top: -50px;"><img src="/image/logo.png" style="width:55px;">喵 了 个 咪 </h1>
+      <h1 class="title" style="margin-top: -50px;"><img src="/image/logo.png" style="width:55px;"> 喵了个咪 </h1>
       <div>
         <button class="nes-btn is-error col-sm-4 col-md-2" onclick="locate('/')"> 简 介 </button>
         <button class="nes-btn is-warning col-sm-4 col-md-2" onclick="locate('/activity')"> 活 動 </button>
