@@ -39,9 +39,8 @@
 
     <footer class="footer">
       <p>
-        <a>Author: &copy;ZooJeek</a>
-        <span>-</span>
-        ZooJeek@Outlook.com
+        Copyright: &copy;ZooJeek <br>
+        Contact: ZooJeek@Outlook.com
       </p>
     </footer>
   </body>
