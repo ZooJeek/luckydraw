@@ -19,7 +19,7 @@
       <p>Happy christmas!</p>
     </header>
     <section class="nes-container with-title is-centered is-rounded is_dark">
-      <h1 class="title"><img src="/image/logo.png" style="width:43px;margin-top: -20px;"> 喵 了 个 咪 </h1>
+      <h1 class="title"><img src="/image/logo.png" style="width:43px;margin-top: -10px;"> 喵 了 个 咪 </h1>
       <div>
         <button class="nes-btn is-primary"> 简 介 </button>
         <button class="nes-btn is-success"> 活 動 </button>
