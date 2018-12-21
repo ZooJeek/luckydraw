@@ -4,12 +4,12 @@
 <i class="nes-bulbasaur"></i>
 <form action="/login" method="post">
 	@csrf
-	<div class="nes-field is-inline" style="margin-top: 5px;">
+	<div class="nes-field" style="margin-top: 5px;">
     	<label for="name_field">名 称：</label>
 		<input type="text" id="name_field" class="nes-input" name="username">
 	</div>
 
-	<div class="nes-field is-inline" style="margin-top: 5px;">
+	<div class="nes-field" style="margin-top: 5px;">
     	<label for="pass_field">密 码：</label>
 		<input type="password" id="pass_field" class="nes-input" name="password">
 	</div>
