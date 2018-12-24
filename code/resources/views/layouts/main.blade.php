@@ -29,12 +29,9 @@
       </div>
     </section>
     <section class="nes-container with-title" style="text-align: center;margin-top: 30px;">
-      <h2 class="title" style="margin-top: -50px;">{{ $active_title ?? "简介" }}</h2>
-      <div class="containers" id='active_body'>
         
-        @yield('active_body')
-        
-      </div>
+    @yield('active_body')
+      
     </section>
 
     <footer class="footer">
