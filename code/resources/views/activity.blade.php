@@ -3,7 +3,7 @@
 @section('active_body')
 @if($username == '原来是蕾蕾耶')
 
-当前收获信息：
+当前收货信息：
 {{ $address ?? "未填写" }}<br><br>
 
 恭喜您获得奖励，请填写收货信息（可使用化名）:<br>
