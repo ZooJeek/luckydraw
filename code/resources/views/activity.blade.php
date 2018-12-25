@@ -12,7 +12,7 @@
   <div class="row">
     <div class="col-3">{{ $user->username }}</div>
     <div class="col-2">欧气值：{{ $user->score }}</div>
-    <div class="col-sm-7"><progress class="nes-progress is-primary" value="{{ $user->score }}" max="1000"></progress></div>
+    <div class="col-sm-7"><progress class="nes-progress is-primary" value="{{ $user->score }}" max="10000"></progress></div>
   </div>
   @endforeach
 
