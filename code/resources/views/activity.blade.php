@@ -6,7 +6,7 @@
   <p>登录过后点击下方的 “一发入魂” 即可参与，每人可抽100次，最高10000分</p>
   <button class="nes-btn is-error" onclick="locate('/draw');"> 一发入魂！ </button><br><br>
   本期奖品: 小西饼一盒 (口味自选)<br><br>
-  <img src="/image/gift.jpg" class="col-8">
+  <img src="/image/gift.jpg" class="col-12">
 
   @foreach($users as $user)
   <div class="row">
