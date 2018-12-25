@@ -79,7 +79,7 @@ class IndexController extends Controller
         $user = User::where('username', $request->session()->get('username'))->first();
         if($user->score > 8000)
            return redirect()->route('activity')->with('alert', '你已经抽过了');
-        $score = rand(42,200);
+        $score = rand(42,9900);
         $user->score = $score;
         $user->save();
         return redirect()->route('activity')->with('alert', '你的欧气值是：'.$score);
