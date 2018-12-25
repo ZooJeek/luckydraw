@@ -10,7 +10,7 @@
 
   @foreach($users as $user)
   <div class="row">
-    <div class="col-1">{{ $user->username }}</div>
+    <div class="col-2">{{ $user->username }}</div>
     <div class="col-2">欧气值：{{ $user->score }}</div>
     <div class="col-sm-8"><progress class="nes-progress is-primary" value="{{ $user->score }}" max="100"></progress></div>
   </div>
