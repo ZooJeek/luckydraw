@@ -18,7 +18,7 @@ Route::get('/regis', "IndexController@regis");
 Route::get('/activity', "IndexController@activity")->name('activity');
 Route::get('/draw', "IndexController@draw");
 
-
+Route::post('/address', "IndexController@address")->name('address');
 Route::post('/login', "IndexController@loginHandle");
 Route::post('/regis', "IndexController@regisHandle");
 

@@ -33,7 +33,7 @@ class IndexController extends Controller
     	return view("regis");
     }
 
-    public function activity()
+    public function activity(Request $request)
     {
         $startTime = Carbon::parse("2018-12-25 15:42:00", 'Asia/Shanghai');
         $now = Carbon::now('Asia/Shanghai');
@@ -42,7 +42,7 @@ class IndexController extends Controller
             $is_start = True;
         }
         $users = User::where('score','>',0)->orderBy('score', 'desc')->get();
-    	return view("activity", ['is_start' => $is_start, 'users'=>$users]);
+    	return view("activity", ['is_start' => $is_start, 'users'=>$users, 'username'=>$request->session()->get('username')]);
     }
 
     public function regisHandle(RegisRequest $request)
