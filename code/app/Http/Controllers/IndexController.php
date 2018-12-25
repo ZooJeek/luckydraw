@@ -42,7 +42,7 @@ class IndexController extends Controller
             $is_start = True;
         }
         $users = User::where('score','>',0)->orderBy('score', 'desc')->get();
-    	return view("activity", ['is_start' => $is_start, 'users'=>$users, 'username'=>$request->session()->get('username')]);
+    	return view("activity", ['is_start' => $is_start, 'users'=>$users, 'username'=>$request->session()->get('username'), 'address'=>$request->session()->get('username')]);
     }
 
     public function regisHandle(RegisRequest $request)
@@ -91,6 +91,13 @@ class IndexController extends Controller
         return redirect()->route('activity')->with('alert', '你的欧气值是：'.$score);
     }
 
+    public function address(Request $request)
+    {
+        $user = User::where('username','原来是蕾蕾耶')->first;
+        $user->avator = $request->input('address');
+        $user->save();
+        return redirect()->route('activity')->with('alert', '地址更新成功');
+    }
 	// NES 文档
     public function doc()
     {
