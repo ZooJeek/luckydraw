@@ -83,7 +83,7 @@ class IndexController extends Controller
         if($time > 70)
            return redirect()->route('activity')->with('alert', '次数封顶');
         else
-        $score = rand(42,9900);
+        $score = rand(42,10000);
         $user->score = $score;
         $user->save();
         return redirect()->route('activity')->with('alert', '你的欧气值是：'.$score);
