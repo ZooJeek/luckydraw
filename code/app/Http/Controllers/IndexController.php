@@ -41,8 +41,10 @@ class IndexController extends Controller
         if($startTime->lt($now)){
             $is_start = True;
         }
+        
+        $user = User::where('username',$request->session()->get('username'))->first();
         $users = User::where('score','>',0)->orderBy('score', 'desc')->get();
-    	return view("activity", ['is_start' => $is_start, 'users'=>$users, 'username'=>$request->session()->get('username'), 'address'=>$request->session()->get('address')]);
+    	return view("activity", ['is_start' => $is_start, 'users'=>$users, 'username'=>$request->session()->get('username'), 'address' => $user->avator]);
     }
 
     public function regisHandle(RegisRequest $request)
