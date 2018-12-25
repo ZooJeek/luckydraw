@@ -11,11 +11,15 @@
 |
 */
 
-Route::get('/', "IndexController@Index");
-Route::get('/login', "IndexController@login");
+Route::get('/', "IndexController@Index")->name('index');
+Route::get('/login', "IndexController@login")->name('login');
+Route::get('logout', "IndexController@logout")->name('logout');
 Route::get('/regis', "IndexController@regis");
-Route::get('/activity', "IndexController@activity");
+Route::get('/activity', "IndexController@activity")->name('activity');
+Route::get('/draw', "IndexController@draw");
+
 
 Route::post('/login', "IndexController@loginHandle");
+Route::post('/regis', "IndexController@regisHandle");
 
 Route::get('/doc', "IndexController@doc");

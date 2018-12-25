@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+use App\Http\Requests\LoginRequest;
+use App\Http\Requests\RegisRequest;
+use App\User;
 
 class IndexController extends Controller
 {
@@ -11,24 +15,72 @@ class IndexController extends Controller
         return view('index');
     }
 
-    public function login()
+    public function login(Request $request)
     {
-    	return view("login",['active_title' => '登入']);
+        if($request->session()->has('username'))
+            return view('loged', ['username' => $request->session()->get('username')]);
+        return view("login");
+    }
+
+    public function logout(Request $request)
+    {
+        $request->session()->forget('username');
+        return redirect()->route('index');
     }
 
 	public function regis()
     {
-    	return view("regis",['active_title' => '注册']);
+    	return view("regis");
     }
 
     public function activity()
     {
-    	return view("activity",['active_title' => '活动']);
+        $startTime = Carbon::parse("2018-12-25 15:42:00", 'Asia/Shanghai');
+        $now = Carbon::now('Asia/Shanghai');
+        $start = false;
+        if($startTime->lt($now)){
+            $is_start = True;
+        }
+        $users = User::where('score','>',0)->orderBy('score', 'desc')->get();
+    	return view("activity", ['is_start' => $is_start, 'users'=>$users]);
     }
 
-    public function loginHandle(Request $request)
+    public function regisHandle(RegisRequest $request)
     {
-    	return $request->input('username').$request->input('password');
+        $validated = $request->validated();
+        $user = new User();
+        $user->username = $request->input('username');
+        $user->password = $request->input('password');
+        $res = $user->save();
+        if($res){
+            $request->session()->put('username', $user->username);
+        }
+        return redirect()->route('index')->with('alert', '注册成功，已自动登录！');
+    }
+
+    public function loginHandle(LoginRequest $request)
+    {
+        if($request->session()->has('user'))
+            return "你他妈干啥？";
+        $validated = $request->validated();
+        $user = User::where('username', $request->input('username'))
+                ->where('password', $request->input('password'))
+                ->first();
+        if($user){
+            $request->session()->put('username', $user->username);
+            return redirect()->route('index')->with('alert', '登录成功');
+        }else{
+            return redirect()->route('login')->with('failLogin','名称或密码错误');
+        }
+    }
+
+    public function draw(Request $request)
+    {
+        $user = User::where('username', $request->session()->get('username'))->first();
+        $score = rand(42,100);
+        $user->score = $score;
+        $user->save();
+        return redirect()->route('activity')->with('alert', '你的欧气值是：'.$score);
     }
 
 	// NES 文档

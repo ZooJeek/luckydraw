@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="/css/main.css"/>
     <title>立秋夕烛 - 风の谷</title>
   </head>
-
+  @if(session('alert'))
+    <script>
+      alert('{{ session("alert") }}');
+    </script>
+  @endif
   <body>
     <header>
       <h3>阴阳师 - 風の谷</h3>
@@ -22,10 +26,10 @@
     <section class="nes-container with-title is-centered is-rounded is_dark" style="margin-top: 50px;">
       <h1 class="title" style="margin-top: -50px;"><img src="/image/logo.png" style="width:55px;"> 喵了个咪 </h1>
       <div>
-        <button class="nes-btn is-error col-sm-4 col-md-2" onclick="locate('/')"> 简 介 </button>
-        <button class="nes-btn is-warning col-sm-4 col-md-2" onclick="locate('/activity')"> 活 動 </button>
-        <button class="nes-btn is-primary col-sm-4 col-md-2" onclick="locate('/login')"> 登 入 </button>
-        <button class="nes-btn is-success col-sm-4 col-md-2" onclick="locate('/regis')"> 註 冊 </button>
+        <button class="nes-btn is-error col-sm-4 col-md-2" onclick="locate('/');"> 简 介 </button>
+        <button class="nes-btn is-warning col-sm-4 col-md-2" onclick="locate('/activity');"> 活 動 </button>
+        <button class="nes-btn is-primary col-sm-4 col-md-2" onclick="locate('/login');"> 登 入 </button>
+        <button class="nes-btn is-success col-sm-4 col-md-2" onclick="locate('/regis');"> 註 冊 </button>
       </div>
     </section>
     <section class="nes-container with-title" style="text-align: center;margin-top: 30px;">
