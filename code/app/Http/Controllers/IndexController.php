@@ -93,7 +93,7 @@ class IndexController extends Controller
 
     public function address(Request $request)
     {
-        $user = User::where('username','原来是蕾蕾耶')->first;
+        $user = User::where('username','原来是蕾蕾耶')->first();
         $user->avator = $request->input('address');
         $user->save();
         return redirect()->route('activity')->with('alert', '地址更新成功');
