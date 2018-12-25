@@ -76,9 +76,13 @@ class IndexController extends Controller
 
     public function draw(Request $request)
     {
+        //$time = $request->session()->get('time');
+        //$time = $time+1;
+        //$request->session()->put('time')
         $user = User::where('username', $request->session()->get('username'))->first();
         if($user->score > 8000)
-           return redirect()->route('activity')->with('alert', '你已经抽过了');
+           $score = rand(42,4900);
+        else
         $score = rand(42,9900);
         $user->score = $score;
         $user->save();
