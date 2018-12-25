@@ -78,7 +78,7 @@ class IndexController extends Controller
     {
         $time = $request->session()->get('time');
         $time = $time+1;
-        $request->session()->put('time'，$time);
+        $request->session()->put('time',$time);
         $user = User::where('username', $request->session()->get('username'))->first();
         if($time > 70)
            return redirect()->route('activity')->with('alert', '次数封顶');
