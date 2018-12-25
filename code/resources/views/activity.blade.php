@@ -3,7 +3,7 @@
 @section('active_body')
 @if($is_start)
   <p>抽奖活动开始啦！ 抽奖时间 21：00 —— 22:00</p>
-  <p>登录过后点击下方的 “一发入魂” 即可参与</p>
+  <p>登录过后点击下方的 “一发入魂” 即可参与，每人可抽100次，最高10000分</p>
   <button class="nes-btn is-error" onclick="locate('/draw');"> 一发入魂！ </button><br><br>
   本期奖品: 小西饼一盒 (口味自选)<br><br>
   <img src="/image/gift.jpg">

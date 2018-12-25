@@ -80,7 +80,7 @@ class IndexController extends Controller
         $time = $time+1;
         $request->session()->put('time',$time);
         $user = User::where('username', $request->session()->get('username'))->first();
-        if($time > 7)
+        if($time > 70)
            return redirect()->route('activity')->with('alert', '次数封顶');
         else
         $score = rand(42,10000);
