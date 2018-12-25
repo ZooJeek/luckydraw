@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('active_body')
-@if($username == '原来是蕾蕾耶----')
+@if($username == '原来是蕾蕾耶')
 
 当前收获信息：
 {{ $address ?? "未填写" }}<br><br>
@@ -17,7 +17,7 @@
 
 @endif
 
-@if(@$username != '原来是蕾蕾耶——————')
+@if(@$username != '原来是蕾蕾耶')
 <h3>活动已结束</h3>
 @endif
 @endsection
