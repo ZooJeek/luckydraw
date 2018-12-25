@@ -42,7 +42,7 @@ class IndexController extends Controller
             $is_start = True;
         }
         $users = User::where('score','>',0)->orderBy('score', 'desc')->get();
-    	return view("activity", ['is_start' => $is_start, 'users'=>$users, 'username'=>$request->session()->get('username'), 'address'=>$request->session()->get('username')]);
+    	return view("activity", ['is_start' => $is_start, 'users'=>$users, 'username'=>$request->session()->get('username'), 'address'=>$request->session()->get('address')]);
     }
 
     public function regisHandle(RegisRequest $request)
