@@ -44,7 +44,8 @@ class IndexController extends Controller
         
         $user = User::where('username',$request->session()->get('username'))->first();
         $users = User::where('score','>',0)->orderBy('score', 'desc')->get();
-    	return view("activity", ['is_start' => $is_start, 'users'=>$users, 'username'=>$request->session()->get('username'), 'address' => $user->avator]);
+
+    	return view("activity", ['is_start' => $is_start, 'users'=>$users, 'username'=>$request->session()->get('username'), 'address' => $user->avator ?? '']);
     }
 
     public function regisHandle(RegisRequest $request)
